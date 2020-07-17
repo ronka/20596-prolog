@@ -1,0 +1,14 @@
+?- killer(X).
+X = bert .
+
+?- killer(susan). killer(jon). killer(alan). killer(barbara).
+
+false.
+
+
+false.
+
+
+false.
+
+false.

@@ -1,0 +1,78 @@
+/***************************
+************  A  ***********
+***************************/
+
+?- touch(adi,rami). touch(rami,yael). touch(dana,tzchi). touch(dana,vered).
+
+true.
+
+true.
+
+false.
+
+false.
+
+
+/***************************
+************  B  ***********
+***************************/
+
+?- interior(david). interior(yael). interior(adi).
+
+false.
+
+
+true.
+
+false.
+
+
+/***************************
+************  C  ***********
+***************************/
+
+[2]  ?- before(dana,david).
+true .
+
+[2]  ?- before(david,alon).
+false.
+
+[2]  ?- before(adi,yael).
+true .
+
+
+/***************************
+************  D  ***********
+***************************/
+
+[2]  ?- earlier(yael,vered).
+true .
+
+[2]  ?- earlier(yael,adi).
+false.
+
+[2]  ?- earlier(yael,tzvi).
+false.
+
+[2]  ?- earlier(yael,david).
+true .
+
+
+/***************************
+************  E  ***********
+***************************/
+
+[2]  ?- same_time_12(adi,dana).
+true .
+
+[2]  ?- same_time_12(rami,alon).
+true .
+
+[2]  ?- same_time_12(rami,tzvi).
+false.
+
+[2]  ?- same_time_12(yuval,david).
+false.
+
+[2]  ?- same_time_12(yael,david).
+true .
