@@ -3,12 +3,17 @@
 long_mult(Num1, Num2, Res):-
     long_mult(Num1, Num2, [0], Res).
 
+% the idea is to multiply one number at a time
 long_mult(Num1, [Num2|T2], [Rest|Trest], [Res|Tres]):-
+    % extract least significant number from multiplication
     list_mult(Num1, Num2, [LongMultHead|LongMultTail]),
+    % add the rest to that number, save the number
     Res is (LongMultHead + Rest) mod 10,
+    % caculate the rest to pass on, add to it the rest from previous call
     Res1Rest is (LongMultHead + Rest) // 10,
     long_add(Trest,[Res1Rest],Trest1),
     long_add(Trest1, LongMultTail, LongAddRes),
+    % go to next number
     long_mult(Num1, T2, LongAddRes, Tres).
 
 long_mult( _, [], Z, Z ).

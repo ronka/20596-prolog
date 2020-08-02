@@ -1,0 +1,8 @@
+?- long_conc([[a,b,c],[a,b],[a]],Res).
+Res = [a, b, c, a, b, a].
+
+?- long_conc([[a,b,c],[a,b],[a],[1,2],[1,2,3,4]],Res).
+Res = [a, b, c, a, b, a, 1, 2, 1|...].
+
+?- long_conc([[a,b,c],[1,2],[1,2,3,4]],Res).
+Res = [a, b, c, 1, 2, 1, 2, 3, 4].

@@ -1,9 +1,5 @@
 
-
-
-sol(X11,X12,X13,
-	X21,X22,X23,
-	X31,X32,X33):-
+solution(X11,X12,X13,X21,X22,X23,X31,X32,X33):-
     % get all possible combos of numbers 1 to 9
     permutation([X11,X12,X13,X21,X22,X23,X31,X32,X33],[1,2,3,4,5,6,7,8,9]),
 
