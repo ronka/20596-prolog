@@ -1,0 +1,9 @@
+?- assign_numbers(g(2,3,A,X,Y,f(X,Y))).
+A = 1,
+X = 2,
+Y = 3.
+
+?- assign_numbers(h(2,h(3,A),[X,Y],f(X,Y))).
+A = 1,
+X = 2,
+Y = 3.
