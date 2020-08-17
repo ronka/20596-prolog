@@ -1,9 +1,15 @@
 
+% a - with cut
+% delete_one(X,[X|Xs],Xs):-!.
+% delete_one(X,[Y|Ys],[Y|Xs]):-
+%     delete_one(X,Ys,Xs).
 
-% a
-delete_one(X,[X|Xs],Xs):-!.
+
+% a - with not
+delete_one(X,[X|Xs],Xs).
 delete_one(X,[Y|Ys],[Y|Xs]):-
-    delete_one(X,Ys,Xs).
+    delete_one(X,Ys,Xs),
+    not(X = Y).
 
 
 % b
