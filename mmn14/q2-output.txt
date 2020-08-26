@@ -1,7 +1,6 @@
+?- build_tree(T), maxSubTree(T,Res).
+Res = t(t(nil, 9, nil), 12, t(nil, 10, nil)).
+
 ?- T=t(t(nil,5,nil),-4,t(nil,3,nil)),maxSubTree(T,Res).
 T = t(t(nil, 5, nil), -4, t(nil, 3, nil)),
 Res = t(nil, 5, nil).
-
-?- T=t(t(t(nil,-5,nil),4,t(t(nil,15,nil),-20,t(nil,10,nil))),2,t(nil,-8,t(t(nil,9,nil),12,t(nil,10,nil)))), maxSubTree(T,Res).
-T = t(t(t(nil, -5, nil), 4, t(t(nil, 15, nil), -20, t(nil, 10, nil))), 2, t(nil, -8, t(t(nil, 9, nil), 12, t(nil, 10, nil)))),
-Res = t(t(nil, 9, nil), 12, t(nil, 10, nil)).
