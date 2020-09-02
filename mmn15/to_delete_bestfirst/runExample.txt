@@ -1,0 +1,8 @@
+| ?- solve('mmn15-maze1.txt','out1.txt').
+yes
+
+| ?- solve('mmn15-maze2.txt','out2.txt').
+yes
+
+| ?- solve('mmn15-maze3.txt','out3.txt').
+yes
